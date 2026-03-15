@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ PRIMARY SEO ═══ -->
+  <title>The Dark Stories | True Crime Investigations — Inside the Criminal Mind</title>
+  <meta name="description" content="The Dark Stories explores real true crime cases through psychological analysis and criminal profiling. Deep-dive investigations into the darkest minds. Watch on YouTube, listen on Spotify." />
+  <meta name="keywords" content="true crime, dark stories, criminal mind, psychological analysis, serial killers, unsolved murders, crime investigations, Bryan Kohberger, Idaho murders, true crime YouTube, crime documentaries, forensic psychology, darkstoriesmind" />
+  <meta name="author" content="The Dark Stories" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://darkstoriesmind.github.io/" />
+
+  <!-- ═══ OPEN GRAPH ═══ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Dark Stories" />
+  <meta property="og:title" content="The Dark Stories | True Crime — Inside the Criminal Mind" />
+  <meta property="og:description" content="Deep-dive true crime investigations through psychological analysis and criminal profiling. 4K subscribers. 343 videos. New cases every week." />
+  <meta property="og:image" content="https://yt3.googleusercontent.com/ytc/darkstoriesmind" />
+  <meta property="og:url" content="https://darkstoriesmind.github.io/" />
+
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@darkstoriesmind" />
+  <meta name="twitter:title" content="The Dark Stories | True Crime" />
+  <meta name="twitter:description" content="Real true crime cases through psychological analysis and criminal profiling." />
+
+  <!-- ═══ SCHEMA.ORG ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "The Dark Stories",
+    "alternateName": "darkstoriesmind",
+    "url": "https://darkstoriesmind.github.io/",
+    "description": "The Dark Stories explores real true crime cases through psychological analysis and criminal profiling.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Dark Stories",
+      "logo": { "@type": "ImageObject", "url": "https://darkstoriesmind.github.io/logo.png" },
+      "sameAs": [
+        "https://www.youtube.com/@darkstoriesmind",
+        "https://www.instagram.com/darkstoriesmind/",
+        "https://www.facebook.com/darkstoriesmind/",
+        "https://x.com/darkstoriesmind",
+        "https://open.spotify.com/show/6vU0XhPmAVI4KWkgS1P9Tq",
+        "https://www.pinterest.com/darkstoriesmind/",
+        "https://www.tumblr.com/blog/thedarkstories",
+        "https://thedarkstoriesofficial.blogspot.com/"
+      ]
+    }
+  }
+  </script>
+
+  <!-- ═══ FONTS ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:    #080604;
+      --deep:     #0e0b08;
+      --surface:  #161210;
+      --card:     #1c1714;
+      --border:   #2a221a;
+      --border2:  #3d3028;
+      --gold:     #c9a84c;
+      --gold-lt:  #e8cc82;
+      --gold-dim: #7a5e28;
+      --crimson:  #8b1a1a;
+      --crim2:    #6b1212;
+      --text:     #ede5d8;
+      --muted:    #8a7a6a;
+      --dim:      #4a3f35;
+      --silver:   #a09080;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--text);
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    /* ── CURSOR ── */
+    body { cursor: none; }
+    #cur { position: fixed; top:0; left:0; width:10px; height:10px; background:var(--gold); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); mix-blend-mode:difference; transition:transform .1s; }
+    #cur-r { position: fixed; top:0; left:0; width:32px; height:32px; border:1px solid var(--gold-dim); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition:left .2s cubic-bezier(.25,.1,.25,1), top .2s cubic-bezier(.25,.1,.25,1); }
+
+    /* ── NOISE ── */
+    body::before { content:''; position:fixed; inset:0; z-index:1; pointer-events:none; opacity:.3;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E");
+    }
+
+    /* ══════════ NAV ══════════ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 3rem;
+      background: linear-gradient(180deg, rgba(8,6,4,.95) 0%, rgba(8,6,4,0) 100%);
+      backdrop-filter: blur(2px);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 0.9rem; text-decoration: none;
+    }
+    .nav-logo-icon {
+      width: 42px; height: 42px; border: 1px solid var(--gold-dim);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      background: var(--deep);
+    }
+    /* SVG Logo replica */
+    .nav-logo-icon svg { width: 30px; height: 30px; }
+    .nav-logo-text { font-family: 'Cinzel', serif; }
+    .nav-logo-text .top { display:block; font-size:.5rem; letter-spacing:.4em; color:var(--gold-dim); }
+    .nav-logo-text .main { display:block; font-size:.85rem; font-weight:600; letter-spacing:.2em; color:var(--text); }
+    .nav-logo-text .sub { display:block; font-size:.42rem; letter-spacing:.3em; color:var(--muted); font-style:italic; font-family:'Cormorant Garamond',serif; }
+    .nav-cta {
+      font-family:'Cinzel',serif; font-size:.6rem; letter-spacing:.3em; text-transform:uppercase;
+      color:var(--gold); border:1px solid var(--gold-dim); padding:.6rem 1.5rem;
+      text-decoration:none; transition:all .25s; cursor:none;
+    }
+    .nav-cta:hover { background:var(--gold); color:var(--black); }
+
+    /* ══════════ HERO ══════════ */
+    .hero {
+      position:relative; min-height:100vh;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      text-align:center; padding:8rem 2rem 5rem; overflow:hidden;
+    }
+    .hero-bg {
+      position:absolute; inset:0; z-index:0;
+      background:
+        radial-gradient(ellipse 100% 50% at 50% -10%, rgba(139,26,26,.18) 0%, transparent 60%),
+        radial-gradient(ellipse 70% 50% at 50% 110%, rgba(201,168,76,.07) 0%, transparent 60%),
+        radial-gradient(ellipse 120% 80% at 50% 50%, rgba(14,11,8,1) 0%, rgba(8,6,4,1) 100%);
+    }
+    /* Decorative rings */
+    .ring {
+      position:absolute; border-radius:50%; border:1px solid rgba(201,168,76,.04);
+      top:50%; left:50%; transform:translate(-50%,-50%); pointer-events:none;
+    }
+    .r1 { width:500px; height:500px; }
+    .r2 { width:800px; height:800px; }
+    .r3 { width:1100px; height:1100px; border-color:rgba(201,168,76,.025); }
+
+    /* Logo in hero */
+    .hero-logo {
+      position:relative; z-index:2; margin-bottom:2.5rem;
+    }
+    .logo-circle {
+      width:110px; height:110px; border-radius:50%;
+      border:1px solid var(--gold-dim);
+      background: radial-gradient(circle at 40% 35%, #2a2018, #0e0b08);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      margin:0 auto 1rem; position:relative; overflow:hidden;
+    }
+    .logo-circle::before {
+      content:''; position:absolute; inset:0; border-radius:50%;
+      background: radial-gradient(circle at 60% 70%, rgba(139,26,26,.15), transparent 60%);
+    }
+    .logo-the { font-family:'Cinzel',serif; font-size:.45rem; letter-spacing:.4em; color:var(--muted); }
+    .logo-dark { font-family:'Cinzel',serif; font-size:1.1rem; font-weight:900; color:var(--text); letter-spacing:.08em; line-height:1; }
+    .logo-stories { font-family:'Cinzel',serif; font-size:.75rem; font-weight:600; color:var(--silver); letter-spacing:.12em; }
+    .logo-tagline-sm { font-family:'Cormorant Garamond',serif; font-size:.42rem; letter-spacing:.25em; color:var(--gold-dim); font-style:italic; margin-top:4px; }
+
+    .hero-eyebrow {
+      position:relative; z-index:2;
+      font-family:'Cinzel',serif; font-size:.6rem; letter-spacing:.5em;
+      color:var(--gold); text-transform:uppercase; margin-bottom:1.5rem;
+      display:flex; align-items:center; gap:1rem;
+    }
+    .hero-eyebrow::before, .hero-eyebrow::after { content:''; width:50px; height:1px; background:var(--gold-dim); }
+
+    .hero-title {
+      position:relative; z-index:2;
+      font-family:'Cinzel',serif; font-weight:900;
+      font-size:clamp(3.5rem,12vw,8rem); line-height:.88;
+      letter-spacing:-.01em; color:var(--text);
+      text-shadow: 0 2px 60px rgba(139,26,26,.2), 0 0 100px rgba(201,168,76,.05);
+      margin-bottom:.15em;
+    }
+    .hero-title .the { display:block; font-size:.28em; letter-spacing:.5em; color:var(--muted); font-weight:400; margin-bottom:.3em; }
+    .hero-title .stories { display:block; font-size:.45em; color:var(--silver); font-weight:600; letter-spacing:.15em; margin-top:.1em; }
+
+    .hero-rule {
+      position:relative; z-index:2; display:flex; align-items:center; gap:1rem; margin:2rem auto;
+    }
+    .hero-rule::before, .hero-rule::after { content:''; flex:1; max-width:80px; height:1px; background:linear-gradient(90deg,transparent,var(--gold-dim)); }
+    .hero-rule::after { background:linear-gradient(90deg,var(--gold-dim),transparent); }
+    .hero-rule span { color:var(--crimson); font-size:.7rem; }
+
+    .hero-tagline {
+      position:relative; z-index:2;
+      font-family:'Cormorant Garamond',serif; font-size:clamp(1.1rem,3vw,1.6rem);
+      font-style:italic; color:var(--muted); letter-spacing:.15em; margin-bottom:2.5rem;
+    }
+
+    .hero-btns {
+      position:relative; z-index:2; display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;
+    }
+    .btn-primary {
+      display:inline-flex; align-items:center; gap:.7rem;
+      padding:1rem 2.5rem; background:var(--crimson); border:1px solid var(--crimson);
+      color:var(--text); font-family:'Cinzel',serif; font-size:.65rem; letter-spacing:.3em;
+      text-decoration:none; text-transform:uppercase; transition:all .3s; cursor:none;
+    }
+    .btn-primary:hover { background:transparent; color:var(--crimson); }
+    .btn-outline {
+      display:inline-flex; align-items:center; gap:.7rem;
+      padding:1rem 2.5rem; background:transparent; border:1px solid var(--gold-dim);
+      color:var(--gold); font-family:'Cinzel',serif; font-size:.65rem; letter-spacing:.3em;
+      text-decoration:none; text-transform:uppercase; transition:all .3s; cursor:none;
+    }
+    .btn-outline:hover { background:var(--gold); color:var(--black); }
+
+    .scroll-hint {
+      position:absolute; bottom:2rem; left:50%; transform:translateX(-50%); z-index:2;
+      display:flex; flex-direction:column; align-items:center; gap:.4rem;
+      font-family:'Cinzel',serif; font-size:.5rem; letter-spacing:.35em; color:var(--dim);
+      animation:pulse 2.5s infinite;
+    }
+    .scroll-hint::after { content:''; width:1px; height:36px; background:linear-gradient(180deg,var(--gold-dim),transparent); }
+    @keyframes pulse { 0%,100%{opacity:.4;transform:translateX(-50%) translateY(0)} 50%{opacity:1;transform:translateX(-50%) translateY(5px)} }
+
+
+
+    /* ══════════ SECTION WRAPPER ══════════ */
+    .sec { position:relative; z-index:2; padding:6rem 2rem; }
+    .sec-inner { max-width:1200px; margin:0 auto; }
+    .sec-hd { text-align:center; margin-bottom:3.5rem; }
+    .sec-lbl { font-family:'Cinzel',serif; font-size:.58rem; letter-spacing:.45em; color:var(--gold); text-transform:uppercase; display:block; margin-bottom:.8rem; }
+    .sec-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5vw,3.2rem); font-weight:300; color:var(--text); line-height:1.1; }
+    .sec-title em { color:var(--gold); font-style:italic; }
+
+    /* ══════════ FEATURED VIDEO ══════════ */
+    .featured { background:var(--deep); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .feat-grid { display:grid; grid-template-columns:1.4fr 1fr; gap:4rem; align-items:center; }
+    .feat-frame { aspect-ratio:16/9; overflow:hidden; border:1px solid var(--border2); position:relative; }
+    .feat-frame iframe { width:100%; height:100%; border:none; display:block; }
+    .feat-badge { font-family:'Cinzel',serif; font-size:.55rem; letter-spacing:.4em; color:var(--crimson); text-transform:uppercase; display:inline-block; border:1px solid var(--crim2); padding:.3rem .8rem; margin-bottom:1.2rem; }
+    .feat-title { font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:300; color:var(--text); line-height:1.2; margin-bottom:1rem; }
+    .feat-desc { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--muted); line-height:1.9; margin-bottom:2rem; }
+    .feat-link { font-family:'Cinzel',serif; font-size:.62rem; letter-spacing:.25em; color:var(--gold); text-decoration:none; text-transform:uppercase; border-bottom:1px solid var(--gold-dim); padding-bottom:3px; transition:all .2s; cursor:none; }
+    .feat-link:hover { color:var(--gold-lt); border-color:var(--gold-lt); }
+
+    /* ══════════ VIDEO GRID ══════════ */
+    .vgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.2rem; }
+    .vcard {
+      background:var(--card); border:1px solid var(--border);
+      transition:transform .3s, border-color .3s; cursor:none; text-decoration:none; display:block; color:inherit;
+    }
+    .vcard:hover { transform:translateY(-5px); border-color:var(--gold-dim); }
+    .vthumb { aspect-ratio:16/9; position:relative; overflow:hidden; }
+    .vthumb img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s ease; }
+    .vcard:hover .vthumb img { transform:scale(1.04); }
+    .vthumb-link {
+      position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+      background:rgba(8,6,4,.35); transition:background .3s; text-decoration:none;
+    }
+    .vcard:hover .vthumb-link { background:rgba(8,6,4,.1); }
+    .play-btn { width:50px; height:50px; border:1.5px solid rgba(201,168,76,.65); border-radius:50%; display:flex; align-items:center; justify-content:center; transition:transform .3s, border-color .3s; }
+    .vcard:hover .play-btn { transform:scale(1.1); border-color:var(--gold); }
+    .play-btn svg { color:var(--gold); width:16px; height:16px; margin-left:3px; }
+    .vinfo { padding:1rem 1.2rem 1.3rem; }
+    .vtag { font-family:'Cinzel',serif; font-size:.52rem; letter-spacing:.3em; color:var(--gold-dim); text-transform:uppercase; margin-bottom:.4rem; display:block; }
+    .vtitle { font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-weight:400; color:var(--text); line-height:1.45; }
+
+    /* ══════════ SUBSCRIBE ══════════ */
+    .subscribe { background:var(--surface); text-align:center; border-top:1px solid var(--border); }
+    .sub-inner { max-width:680px; margin:0 auto; }
+    .yt-logo-wrap { margin:0 auto 2rem; }
+    .yt-icon { width:64px; height:64px; background:#ff0000; border-radius:14px; display:flex; align-items:center; justify-content:center; margin:0 auto; }
+    .sub-title { font-family:'Cinzel',serif; font-size:1.6rem; font-weight:600; letter-spacing:.05em; color:var(--text); margin-bottom:1rem; }
+    .sub-stat { font-family:'Cormorant Garamond',serif; font-size:1rem; color:var(--gold-dim); letter-spacing:.1em; margin-bottom:.8rem; }
+    .sub-desc { font-family:'Cormorant Garamond',serif; font-size:1.15rem; color:var(--muted); line-height:1.9; margin-bottom:2.5rem; }
+    .sub-btn {
+      display:inline-flex; align-items:center; gap:.8rem;
+      padding:1.1rem 3rem; background:#ff0000; border:1px solid #ff0000;
+      color:#fff; font-family:'Cinzel',serif; font-size:.7rem; letter-spacing:.3em;
+      text-transform:uppercase; text-decoration:none; transition:all .3s; cursor:none;
+    }
+    .sub-btn:hover { background:transparent; color:#ff0000; }
+
+    /* ══════════ PODCAST ══════════ */
+    .podcast { background:var(--deep); border-top:1px solid var(--border); }
+    .pod-grid { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center; max-width:900px; margin:0 auto; }
+    .pod-art {
+      aspect-ratio:1; background:var(--card); border:1px solid var(--border2);
+      display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1rem;
+      padding:2rem;
+    }
+    .pod-badge { font-family:'Cinzel',serif; font-size:.5rem; letter-spacing:.4em; color:var(--muted); text-transform:uppercase; }
+    .pod-name { font-family:'Cinzel',serif; font-size:1.3rem; font-weight:900; color:var(--text); text-align:center; line-height:1.2; }
+    .pod-sub { font-family:'Cormorant Garamond',serif; font-size:.9rem; font-style:italic; color:var(--gold-dim); }
+    .pod-icon { color:#1db954; }
+    .pod-info .sec-title { text-align:left; margin-bottom:1rem; }
+    .pod-info .sec-lbl { display:block; text-align:left; margin-bottom:.8rem; }
+    .pod-info p { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--muted); line-height:1.9; margin-bottom:1.5rem; }
+    .btn-spotify {
+      display:inline-flex; align-items:center; gap:.7rem;
+      padding:.9rem 2rem; background:#1db954; border:1px solid #1db954;
+      color:#000; font-family:'Cinzel',serif; font-size:.62rem; letter-spacing:.25em;
+      text-transform:uppercase; text-decoration:none; transition:all .3s; cursor:none; font-weight:600;
+    }
+    .btn-spotify:hover { background:transparent; color:#1db954; }
+
+    /* ══════════ SOCIAL ══════════ */
+    .social { background:var(--black); border-top:1px solid var(--border); text-align:center; }
+    .social-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin-top:3rem; }
+    .soc-card {
+      display:flex; align-items:center; gap:.75rem;
+      padding:.85rem 1.5rem; background:var(--card); border:1px solid var(--border);
+      text-decoration:none; transition:all .25s; cursor:none;
+      font-family:'Cinzel',serif; font-size:.6rem; letter-spacing:.2em; text-transform:uppercase;
+    }
+    .soc-card:hover { border-color:var(--gold-dim); transform:translateY(-2px); }
+    .soc-card span { font-size:1.1rem; }
+    .soc-yt { color:#ff4444; }
+    .soc-ig { color:#e1306c; }
+    .soc-fb { color:#4267b2; }
+    .soc-tw { color:#1da1f2; }
+    .soc-sp { color:#1db954; }
+    .soc-pi { color:#e60023; }
+    .soc-tm { color:#36465d; }
+    .soc-bl { color:var(--gold); }
+    .soc-card .soc-label { color:var(--muted); }
+    .soc-card:hover .soc-label { color:var(--text); }
+
+    /* ══════════ FOOTER ══════════ */
+    footer {
+      position:relative; z-index:2;
+      background:var(--deep); border-top:1px solid var(--border);
+      padding:3rem 2rem 2rem; text-align:center;
+    }
+    .foot-logo { margin-bottom:1.5rem; }
+    .foot-logo .logo-circle { width:60px; height:60px; margin:0 auto .8rem; }
+    .foot-logo .logo-dark { font-size:.75rem; }
+    .foot-logo .logo-stories { font-size:.5rem; }
+    .foot-links { display:flex; gap:2rem; justify-content:center; flex-wrap:wrap; list-style:none; margin-bottom:1.5rem; }
+    .foot-links a { font-size:.65rem; letter-spacing:.15em; color:var(--dim); text-decoration:none; text-transform:uppercase; transition:color .2s; cursor:none; }
+    .foot-links a:hover { color:var(--gold); }
+    .foot-copy { font-size:.68rem; color:var(--dim); letter-spacing:.1em; }
+    .foot-rule { width:120px; height:1px; background:linear-gradient(90deg,transparent,var(--border2),transparent); margin:1.5rem auto; }
+
+    /* ══════════ FADE ══════════ */
+    .fi { opacity:0; transform:translateY(22px); transition:opacity .8s ease, transform .8s ease; }
+    .fi.vis { opacity:1; transform:translateY(0); }
+    .fi-d1 { transition-delay:.1s; }
+    .fi-d2 { transition-delay:.2s; }
+    .fi-d3 { transition-delay:.3s; }
+
+    /* ══════════ RESPONSIVE ══════════ */
+    @media(max-width:900px) {
+      nav { padding:1rem 1.5rem; }
+      .feat-grid { grid-template-columns:1fr; gap:2rem; }
+      .pod-grid { grid-template-columns:1fr; gap:2rem; }
+      .stats-strip { grid-template-columns:repeat(2,1fr); }
+      .stat-item:nth-child(2) { border-right:none; }
+    }
+    @media(max-width:600px) {
+      .stats-strip { grid-template-columns:1fr 1fr; }
+      .vgrid { grid-template-columns:1fr; }
+      .hero-btns { flex-direction:column; align-items:center; }
+      nav { padding:.8rem 1rem; }
+      .nav-cta { display:none; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-r"></div>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="15" cy="15" r="14" stroke="#7a5e28" stroke-width=".8"/>
+        <text x="15" y="11" font-family="serif" font-size="4" fill="#a09080" text-anchor="middle" letter-spacing="1">THE</text>
+        <text x="15" y="17" font-family="serif" font-size="6.5" fill="#ede5d8" text-anchor="middle" font-weight="bold" letter-spacing=".5">DARK</text>
+        <text x="15" y="23" font-family="serif" font-size="4.5" fill="#a09080" text-anchor="middle" letter-spacing=".5">STORIES</text>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <span class="top">The</span>
+      <span class="main">Dark Stories</span>
+      <span class="sub">Inside the Criminal Mind</span>
+    </div>
+  </a>
+  <a href="https://www.youtube.com/@darkstoriesmind?sub_confirmation=1" target="_blank" rel="noopener" class="nav-cta">Subscribe</a>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="ring r1"></div>
+  <div class="ring r2"></div>
+  <div class="ring r3"></div>
+
+  <div class="hero-logo fi">
+    <div class="logo-circle">
+      <span class="logo-the">THE</span>
+      <span class="logo-dark">DARK</span>
+      <span class="logo-stories">STORIES</span>
+      <span class="logo-tagline-sm">INSIDE THE CRIMINAL MIND</span>
+    </div>
+  </div>
+
+  <div class="hero-eyebrow fi fi-d1">True Crime Channel</div>
+
+  <h1 class="hero-title fi fi-d1">
+    <span class="the">THE</span>
+    DARK
+    <span class="stories">STORIES</span>
+  </h1>
+
+  <div class="hero-rule fi fi-d2"><span>✦</span></div>
+
+  <p class="hero-tagline fi fi-d2">Inside the Criminal Mind</p>
+
+  <div class="hero-btns fi fi-d3">
+    <a href="https://www.youtube.com/@darkstoriesmind?sub_confirmation=1" target="_blank" rel="noopener" class="btn-primary">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.5 12l-5.75 3.52z"/></svg>
+      Subscribe Now
+    </a>
+    <a href="#videos" class="btn-outline">Watch Videos</a>
+  </div>
+
+  <div class="scroll-hint">Scroll</div>
+</header>
+
+
+
+<!-- ══════════════ FEATURED VIDEO ══════════════ -->
+<section class="sec featured fi" aria-labelledby="feat-hd">
+  <div class="sec-inner">
+    <div class="feat-grid">
+      <div class="feat-frame">
+        <a href="https://youtu.be/sLAKEsxsHyA" target="_blank" rel="noopener" style="display:block;position:relative;aspect-ratio:16/9;overflow:hidden;cursor:none;">
+          <img src="https://i.ytimg.com/vi/sLAKEsxsHyA/maxresdefault.jpg" alt="Kohberger Pleaded Guilty But Never Said Why" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+          <div style="position:absolute;inset:0;background:rgba(8,6,4,.35);display:flex;align-items:center;justify-content:center;transition:background .3s;">
+            <div style="width:64px;height:64px;background:rgba(139,26,26,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+              <svg viewBox="0 0 24 24" fill="white" width="24" height="24" style="margin-left:4px;"><polygon points="5,3 19,12 5,21"/></svg>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div>
+        <span class="feat-badge">Latest Episode</span>
+        <h2 class="feat-title" id="feat-hd">Kohberger Pleaded Guilty But Never Said Why — The Forensic Psychology Finally Explains</h2>
+        <p class="feat-desc">Bryan Kohberger's guilty plea shocked the true crime world — but his silence spoke louder. We break down what the forensic psychology reveals and what he could never bring himself to say.</p>
+        <a href="https://youtu.be/sLAKEsxsHyA" target="_blank" rel="noopener" class="feat-link">Watch Full Episode →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ VIDEO GRID ══════════════ -->
+<section class="sec fi" id="videos" style="background:var(--black);" aria-labelledby="vid-hd">
+  <div class="sec-inner">
+    <div class="sec-hd">
+      <span class="sec-lbl">Dark Archives</span>
+      <h2 class="sec-title" id="vid-hd">Latest <em>Investigations</em></h2>
+    </div>
+    <div class="vgrid">
+
+      <a href="https://youtu.be/U3KvVARGFdo" target="_blank" rel="noopener" class="vcard">
+        <div class="vthumb" style="position:relative;">
+          <img src="https://i.ytimg.com/vi/U3KvVARGFdo/maxresdefault.jpg" alt="She Knew He Was There" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"/>
+          <div class="vthumb-link"><div class="play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        </div>
+        <div class="vinfo"><span class="vtag">New Details</span><h3 class="vtitle">She Knew He Was There — The Evidence That Caught Him</h3></div>
+      </a>
+
+      <a href="https://youtu.be/fnYVhu18zTU" target="_blank" rel="noopener" class="vcard">
+        <div class="vthumb" style="position:relative;">
+          <img src="https://i.ytimg.com/vi/fnYVhu18zTU/maxresdefault.jpg" alt="Kohberger Autopsy Report" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"/>
+          <div class="vthumb-link"><div class="play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        </div>
+        <div class="vinfo"><span class="vtag">New Details</span><h3 class="vtitle">Bryan Kohberger Had 15 Minutes — The Autopsy Report Reveals What He Did</h3></div>
+      </a>
+
+      <a href="https://youtu.be/yUCq2gWQMiI" target="_blank" rel="noopener" class="vcard">
+        <div class="vthumb" style="position:relative;">
+          <img src="https://i.ytimg.com/vi/yUCq2gWQMiI/maxresdefault.jpg" alt="She Lied Self Defense" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"/>
+          <div class="vthumb-link"><div class="play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        </div>
+        <div class="vinfo"><span class="vtag">True Crime</span><h3 class="vtitle">She Claimed Self-Defense. The Contact Wound Proved She Was Lying.</h3></div>
+      </a>
+
+      <a href="https://youtu.be/c6-c-k1eHgQ" target="_blank" rel="noopener" class="vcard">
+        <div class="vthumb" style="position:relative;">
+          <img src="https://i.ytimg.com/vi/c6-c-k1eHgQ/maxresdefault.jpg" alt="Serial Killer in Training" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"/>
+          <div class="vthumb-link"><div class="play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        </div>
+        <div class="vinfo"><span class="vtag">Investigation</span><h3 class="vtitle">Serial Killer in Training — Columbia University Confirmed It</h3></div>
+      </a>
+
+      <a href="https://youtu.be/6N6qZQ_9L_0" target="_blank" rel="noopener" class="vcard">
+        <div class="vthumb" style="position:relative;">
+          <img src="https://i.ytimg.com/vi/6N6qZQ_9L_0/maxresdefault.jpg" alt="Dark Case" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"/>
+          <div class="vthumb-link"><div class="play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        </div>
+        <div class="vinfo"><span class="vtag">Dark History</span><h3 class="vtitle">The Case That Haunted an Entire Nation</h3></div>
+      </a>
+
+      <a href="https://youtu.be/_UdIhCqwgpY" target="_blank" rel="noopener" class="vcard">
+        <div class="vthumb" style="position:relative;">
+          <img src="https://i.ytimg.com/vi/_UdIhCqwgpY/maxresdefault.jpg" alt="Unexplained Evidence" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"/>
+          <div class="vthumb-link"><div class="play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        </div>
+        <div class="vinfo"><span class="vtag">Unsolved</span><h3 class="vtitle">The Evidence Nobody Could Explain — Until Now</h3></div>
+      </a>
+
+      <a href="https://youtu.be/FhC2ellz6yU" target="_blank" rel="noopener" class="vcard">
+        <div class="vthumb" style="position:relative;">
+          <img src="https://i.ytimg.com/vi/FhC2ellz6yU/maxresdefault.jpg" alt="Inside the Mind of a Killer" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"/>
+          <div class="vthumb-link"><div class="play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        </div>
+        <div class="vinfo"><span class="vtag">Criminal Mind</span><h3 class="vtitle">Inside the Mind of a Killer — Psychological Breakdown</h3></div>
+      </a>
+
+      <a href="https://youtu.be/pLIRlQc3lXE" target="_blank" rel="noopener" class="vcard">
+        <div class="vthumb" style="position:relative;">
+          <img src="https://i.ytimg.com/vi/pLIRlQc3lXE/maxresdefault.jpg" alt="Cold Case Murder" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"/>
+          <div class="vthumb-link"><div class="play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        </div>
+        <div class="vinfo"><span class="vtag">Cold Case</span><h3 class="vtitle">The Murder That Was Covered Up for Decades</h3></div>
+      </a>
+
+      <a href="https://youtu.be/J-wuae80MYs" target="_blank" rel="noopener" class="vcard">
+        <div class="vthumb" style="position:relative;">
+          <img src="https://i.ytimg.com/vi/J-wuae80MYs/maxresdefault.jpg" alt="Victim Knew the Killer" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"/>
+          <div class="vthumb-link"><div class="play-btn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        </div>
+        <div class="vinfo"><span class="vtag">Mystery</span><h3 class="vtitle">When the Victim Knew the Killer All Along</h3></div>
+      </a>
+
+    </div><!-- /vgrid -->
+
+    <div style="text-align:center; margin-top:3rem;">
+      <a href="https://www.youtube.com/@darkstoriesmind/videos" target="_blank" rel="noopener" class="btn-outline">View All 343 Videos →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SUBSCRIBE ══════════════ -->
+<section class="sec subscribe fi" aria-labelledby="sub-hd">
+  <div class="sub-inner">
+    <div class="yt-logo-wrap">
+      <div class="yt-icon">
+        <svg viewBox="0 0 24 24" fill="white" width="32" height="32"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.5 12l-5.75 3.52z"/></svg>
+      </div>
+    </div>
+    <h2 class="sub-title" id="sub-hd">Never Miss a Dark Story</h2>
+    <p class="sub-desc">Join thousands of true crime investigators who never let a case go cold. Deep-dive psychological analysis, forensic breakdowns, and the stories that mainstream media won't tell.</p>
+    <a href="https://www.youtube.com/@darkstoriesmind?sub_confirmation=1" target="_blank" rel="noopener" class="sub-btn">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 00.5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 002.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 002.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.52V8.48L15.5 12l-5.75 3.52z"/></svg>
+      Subscribe on YouTube
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════ PODCAST ══════════════ -->
+<section class="sec podcast fi" aria-labelledby="pod-hd">
+  <div class="sec-inner">
+    <div class="sec-hd">
+      <span class="sec-lbl">Also Available On</span>
+      <h2 class="sec-title" id="pod-hd">Listen on <em>Spotify</em></h2>
+    </div>
+    <div class="pod-grid">
+      <div class="pod-art">
+        <span class="pod-badge">Podcast</span>
+        <div class="pod-icon">
+          <svg viewBox="0 0 24 24" fill="#1db954" width="48" height="48"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+        </div>
+        <span class="pod-name">The Dark Stories</span>
+        <span class="pod-sub">Inside the Criminal Mind</span>
+      </div>
+      <div class="pod-info">
+        <span class="sec-lbl">True Crime Podcast</span>
+        <h3 class="sec-title">Take the darkness<br /><em>anywhere you go</em></h3>
+        <p>The Dark Stories is also available as a podcast on Spotify. Listen to full true crime investigations, psychological analyses, and criminal profiling — on your commute, at the gym, or wherever you are.</p>
+        <a href="https://open.spotify.com/show/6vU0XhPmAVI4KWkgS1P9Tq" target="_blank" rel="noopener" class="btn-spotify">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+          Listen on Spotify
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SOCIAL ══════════════ -->
+<section class="sec social fi" aria-labelledby="soc-hd">
+  <div class="sec-inner">
+    <div class="sec-hd">
+      <span class="sec-lbl">Follow the Darkness</span>
+      <h2 class="sec-title" id="soc-hd">Find Us <em>Everywhere</em></h2>
+    </div>
+    <div class="social-grid">
+      <a href="https://www.youtube.com/@darkstoriesmind" target="_blank" rel="noopener" class="soc-card">
+        <span>▶</span><span class="soc-yt soc-label">YouTube</span>
+      </a>
+      <a href="https://www.instagram.com/darkstoriesmind/" target="_blank" rel="noopener" class="soc-card">
+        <span>📷</span><span class="soc-ig soc-label">Instagram</span>
+      </a>
+      <a href="https://www.facebook.com/darkstoriesmind/" target="_blank" rel="noopener" class="soc-card">
+        <span>f</span><span class="soc-fb soc-label">Facebook</span>
+      </a>
+      <a href="https://x.com/darkstoriesmind" target="_blank" rel="noopener" class="soc-card">
+        <span>𝕏</span><span class="soc-tw soc-label">Twitter / X</span>
+      </a>
+      <a href="https://open.spotify.com/show/6vU0XhPmAVI4KWkgS1P9Tq" target="_blank" rel="noopener" class="soc-card">
+        <span>♫</span><span class="soc-sp soc-label">Spotify</span>
+      </a>
+      <a href="https://www.pinterest.com/darkstoriesmind/" target="_blank" rel="noopener" class="soc-card">
+        <span>P</span><span class="soc-pi soc-label">Pinterest</span>
+      </a>
+      <a href="https://www.tumblr.com/blog/thedarkstories" target="_blank" rel="noopener" class="soc-card">
+        <span>t</span><span class="soc-tm soc-label">Tumblr</span>
+      </a>
+      <a href="https://thedarkstoriesofficial.blogspot.com/" target="_blank" rel="noopener" class="soc-card">
+        <span>✍</span><span class="soc-bl soc-label">Blog</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="foot-logo">
+    <div class="logo-circle">
+      <span class="logo-the" style="font-size:.35rem;">THE</span>
+      <span class="logo-dark" style="font-size:.75rem;">DARK</span>
+      <span class="logo-stories" style="font-size:.5rem;">STORIES</span>
+    </div>
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.85rem;color:var(--muted);letter-spacing:.15em;">Inside the Criminal Mind</p>
+  </div>
+  <div class="foot-rule"></div>
+  <ul class="foot-links">
+    <li><a href="https://www.youtube.com/@darkstoriesmind" target="_blank" rel="noopener">YouTube</a></li>
+    <li><a href="https://www.youtube.com/@darkstoriesmind/videos" target="_blank" rel="noopener">All Videos</a></li>
+    <li><a href="https://open.spotify.com/show/6vU0XhPmAVI4KWkgS1P9Tq" target="_blank" rel="noopener">Spotify</a></li>
+    <li><a href="https://www.instagram.com/darkstoriesmind/" target="_blank" rel="noopener">Instagram</a></li>
+    <li><a href="https://thedarkstoriesofficial.blogspot.com/" target="_blank" rel="noopener">Blog</a></li>
+    <li><a href="https://www.youtube.com/@darkstoriesmind?sub_confirmation=1" target="_blank" rel="noopener">Subscribe</a></li>
+  </ul>
+  <div class="foot-rule"></div>
+  <p class="foot-copy">© 2025 The Dark Stories · @darkstoriesmind · All rights reserved</p>
+</footer>
+
+<script>
+  const cur = document.getElementById('cur');
+  const curR = document.getElementById('cur-r');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
+  (function loop(){ rx+=(mx-rx)*.12; ry+=(my-ry)*.12; curR.style.left=rx+'px'; curR.style.top=ry+'px'; requestAnimationFrame(loop); })();
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('vis'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
